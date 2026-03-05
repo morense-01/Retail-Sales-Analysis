@@ -1,26 +1,30 @@
-# 📊 Análisis de Ventas y Rentabilidad Retail (End-to-End)
+# 🍽️ Análisis de Preferencias Gastronómicas y Ratings
 
-## 📝 Descripción
-Este proyecto realiza un análisis integral de una operación de retail utilizando un pipeline de datos que va desde el almacenamiento en **PostgreSQL** hasta la visualización estratégica en **Power BI**. 
+Este proyecto integra datos de consumidores y restaurantes en México para identificar patrones de satisfacción y comportamiento del consumidor mediante **SQL** y **Power BI**.
 
-El objetivo principal fue identificar por qué ciertas subcategorías de alto volumen, como **Mesas (Tables)**, presentaban márgenes negativos, permitiendo proponer soluciones basadas en datos.
+---
+
+## 📝 Descripción del Proyecto
+El objetivo es analizar cómo influyen el perfil del consumidor (edad, ocupación, presupuesto) y las características del restaurante (tipo de cocina, servicio de alcohol) en las calificaciones finales.
 
 ## 🛠️ Stack Tecnológico
-* **Base de Datos:** PostgreSQL (Extracción y Transformación).
-* **BI Tool:** Power BI Desktop.
-* **Lenguaje de Análisis:** DAX (Data Analysis Expressions).
-* **Documentación:** Markdown.
+* **Base de Datos:** PostgreSQL (Limpieza y unificación de tablas).
+* **Visualización:** Power BI Desktop.
+* **Lógica:** DAX para KPIs de satisfacción.
 
-## 🔍 Hallazgos Principales (Insights)
-* **Ingresos Totales:** $2.30M con una eficiencia operativa de 38K unidades.
-* **Anomalía Financiera:** Se detectó una pérdida neta de **-$17,725.59** en la subcategoría de Mesas, a pesar de su alto flujo de ventas.
-* **Liderazgo de Mercado:** El segmento de Tecnología representa el 36% de los ingresos totales con los mejores márgenes de beneficio.
+## 📁 Estructura del Repositorio
+* `data/`: Contiene los archivos CSV originales (`consumers.csv`, `ratings.csv`, `restaurants.csv`).
+* `sql/`: Scripts de creación de tablas y limpieza de datos.
+* `dashboard/`: Archivo `.pbix` con el reporte interactivo.
+* `img/`: 1.jpg.
 
-## 🚀 Cómo replicar el proyecto
-1.  **SQL:** Importa los archivos de la carpeta `/data` a tu instancia de PostgreSQL y ejecuta los scripts en `/sql` para limpiar los datos.
-2.  **Power BI:** Abre el archivo `.pbix` en la carpeta `/dashboard`. 
-3.  **Conexión:** Actualiza la fuente de datos para que apunte a tu base de datos local o usa los CSV incluidos.
+## 🔍 Hallazgos Clave (Insights)
+* **Perfil del Consumidor:** La mayoría de los usuarios son estudiantes con presupuesto medio/bajo.
+* **Preferencia:** La cocina mexicana domina las preferencias, pero no siempre obtiene el mejor Service Rating.
+* **Punto de Mejora:** Los restaurantes con "Alcohol Service: None" tienden a recibir calificaciones de servicio más bajas en ciertos segmentos.
 
-## 📸 Dashboard
-![Vista previa del Dashboard](img/tu_captura_principal.png)
+## 🚀 Cómo visualizar el proyecto
+1. Revisa los scripts en la carpeta `/sql` para ver la lógica de limpieza.
+2. Abre el reporte en `/dashboard` para interactuar con los datos.
 
+---
